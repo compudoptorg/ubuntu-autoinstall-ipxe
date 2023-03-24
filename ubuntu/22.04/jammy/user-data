@@ -58,7 +58,7 @@ autoinstall:
   - curtin in-target --target=/target -- wget -O /sbin/reset.sh http://boot.linuxgroove.com/ubuntu/reset.sh
   - chmod +x /target/sbin/reset.sh
   - curtin in-target --target=/target -- useradd -m -r -s /bin/bash admin
-  - 'echo "admin:Compudopt2015" | chpasswd -R /target'
+  - 'echo "admin:password" | chpasswd -R /target'
   - curtin in-target --target=/target -- usermod -aG sudo admin
   - touch /target/var/lib/AccountsService/users/admin
   - 'echo "[User]" >> /target/var/lib/AccountsService/users/admin'
